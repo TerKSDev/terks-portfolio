@@ -21,9 +21,10 @@ export default function IntroductionSection() {
       <section className="flex flex-col w-full h-full px-16 justify-start pt-21 gap-8 max-w-7xl mx-auto">
          {/* Title with Animated Cursor */}
          <motion.div
-            initial={{ opacity: 1, x: -800 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: 'easeOut' }}
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: 'easeOut' }}
+            viewport={{ once: true }}
             className="flex flex-row items-center font-jetbrains gap-8 "
          >
             <div className="flex flex-row items-center h-fit min-w-fit min-h-fit tracking-wider">
@@ -43,9 +44,10 @@ export default function IntroductionSection() {
          <div className="flex flex-col md:flex-row items-stretch justify-center gap-8">
             {/* Image Section */}
             <motion.div
-               initial={{ opacity: 1, x: -800 }}
-               animate={{ opacity: 1, x: 0 }}
-               transition={{ duration: 1, ease: 'easeOut', delay: 0.5 }}
+               initial={{ opacity: 0, x: -100 }}
+               whileInView={{ opacity: 1, x: 0 }}
+               transition={{ duration: 0.7, ease: 'easeOut' }}
+               viewport={{ once: true }}
                className="w-full lg:w-1/3 relative bg-linear-to-br from-cyan-600 to-purple-600 flex items-center justify-center rounded-sm aspect-square shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300"
             >
                <div className="relative w-[calc(100%-8px)] h-[calc(100%-8px)] rounded-sm overflow-hidden bg-slate-900">
@@ -62,9 +64,10 @@ export default function IntroductionSection() {
             <div className="flex flex-1 flex-col gap-6 text-slate-400 font-geist tracking-wide justify-between h-full">
                {/* Introduction */}
                <motion.div
-                  initial={{ opacity: 1, x: 800 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1, ease: 'easeOut', delay: 1 }}
+                  initial={{ opacity: 0, x: 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7, ease: 'easeOut' }}
+                  viewport={{ once: true }}
                   className="bg-slate-900 p-4 rounded-md flex flex-1 max-h-fit flex-col gap-4 border border-slate-800 hover:border-cyan-600 transition-colors duration-200 shadow-lg"
                >
                   <h1 className="text-xl w-full border-b-2 font-outfit tracking-wider font-medium border-slate-600/80 pb-2 mb-1">
@@ -93,9 +96,10 @@ export default function IntroductionSection() {
 
                {/* Current Status */}
                <motion.div
-                  initial={{ opacity: 1, x: 800 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1, ease: 'easeOut', delay: 1.25 }}
+                  initial={{ opacity: 0, x: 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
+                  viewport={{ once: true }}
                   className="bg-slate-900 p-4 rounded-md flex flex-1 max-h-fit flex-col gap-4 text-slate-400 font-geist tracking-wide border border-slate-800 hover:border-cyan-600 transition-colors duration-200 shadow-lg"
                >
                   <h1 className="text-xl w-full border-b-2 font-outfit tracking-wider font-medium border-slate-600/80 pb-2 mb-1">
@@ -119,9 +123,10 @@ export default function IntroductionSection() {
 
          {/* Quote Section */}
          <motion.div
-            initial={{ opacity: 1, x: -800 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, ease: 'easeOut', delay: 1.5 }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
+            viewport={{ once: true }}
             className=" border bg-slate-900 rounded-md border-slate-800 text-slate-400 font-geist tracking-wide"
          >
             <div className="p-4 px-6 flex flex-1 border-l-4 border-cyan-400 rounded-md items-center shadow-lg">
