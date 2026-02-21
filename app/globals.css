@@ -3,10 +3,62 @@
 @theme inline {
    --font-sans: var(--font-geist-sans);
    --font-outfit: var(--font-outfit);
-   --font-jetbrains: var(--font-jet-brain-mono);
+   --font-jetbrains: var(--font-jetbrains-mono);
+
+   --color-primary: #d946ef;
+   --color-secondary: #22d3ee;
 }
 
-body {
-   background: var(--background);
-   color: var(--foreground);
+@layer base {
+   body,
+   html {
+      display: flex;
+      min-height: 100vh;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: var(--color-white);
+
+      @apply bg-slate-950 text-slate-300;
+   }
+
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      @apply font-outfit text-slate-50;
+   }
+}
+
+/* Custom Scrollbar Design */
+::-webkit-scrollbar {
+   width: 10px;
+   height: 10px;
+}
+
+::-webkit-scrollbar-track {
+   background: #020617; /* slate-950 */
+   border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+   background: #334155; /* slate-700 */
+   border-radius: 5px;
+   border: 2px solid #020617; /* slate-950 (creates padding effect) */
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background: var(--color-secondary);
+   box-shadow: 0 0 10px var(--color-secondary);
+}
+
+/* Firefox support */
+@supports (scrollbar-color: auto) {
+   * {
+      scrollbar-width: thin;
+      scrollbar-color: #334155 #020617;
+   }
 }
