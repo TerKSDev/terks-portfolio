@@ -43,7 +43,7 @@ export default function Home() {
          </div>
 
          {/* 1. Code Animation Showcase */}
-         <section className="h-screen w-full snap-start relative items-center flex justify-center z-99">
+         <section className="h-screen w-full snap-start relative items-center flex justify-center z-30">
             <CodeSection />
          </section>
 
