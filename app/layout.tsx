@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Outfit, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
-import Header from './_components/layout/Header';
 
 //* Used for Body Text and Paragraphs
 const geistSans = Geist({
@@ -37,7 +36,6 @@ export default function RootLayout({
             className={`${geistSans.variable} ${outfit.variable} ${jetBrainsMono.variable} antialiased`}
          >
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none z-9"></div>
-            <Header />
             {children}
          </body>
       </html>

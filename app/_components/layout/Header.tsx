@@ -1,7 +1,11 @@
 import Navbar from '@/app/_components/layout/Navbar';
 import Link from 'next/link';
 
-export default function Header() {
+interface HeaderProps {
+   activeSection: string;
+}
+
+export default function Header({ activeSection }: HeaderProps) {
    return (
       <header className="fixed flex flex-row justify-between items-center top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-sm px-8 py-2">
          <Link
@@ -13,7 +17,7 @@ export default function Header() {
             <h1 className="text-cyan-400 font-medium">&nbsp;{' />'}</h1>
          </Link>
 
-         <Navbar />
+         <Navbar activeSection={activeSection} />
       </header>
    );
 }
