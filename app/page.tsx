@@ -12,7 +12,8 @@ export default function Home() {
    return (
       <>
          <Header activeSection={activeSection} />
-         <main className="h-screen w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-slate-950">
+
+         <main className="w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-slate-950 mt-20">
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 mb-4 text-sm text-slate-400 font-jetbrains font-semibold animate-pulse z-20 pointer-events-none">
                <div className="flex flex-col w-full animate-bounce">
                   <span>Scroll Down</span>
@@ -56,7 +57,7 @@ export default function Home() {
                id="home"
                onViewportEnter={() => setActiveSection('home')}
                viewport={{ amount: 0.5 }}
-               className="h-screen w-full snap-start relative items-center flex justify-center z-30"
+               className="h-full w-full snap-start relative items-center flex justify-center z-30 max-md:px-6"
             >
                <CodeSection />
             </motion.section>
@@ -66,7 +67,7 @@ export default function Home() {
                id="introduction"
                onViewportEnter={() => setActiveSection('introduction')}
                viewport={{ amount: 0.5 }}
-               className="h-screen w-full snap-start flex items-center justify-center relative"
+               className="h-full w-full snap-start flex justify-center relative box-border py-4"
             >
                <IntroductionSection />
             </motion.section>
@@ -76,7 +77,7 @@ export default function Home() {
                id="projects"
                onViewportEnter={() => setActiveSection('projects')}
                viewport={{ amount: 0.5 }}
-               className="h-screen w-full snap-start flex items-center justify-center relative bg-slate-950 border-t border-slate-800"
+               className="h-screen w-full snap-start flex items-center justify-center relative bg-slate-950"
             >
                {/* Background Glow */}
                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-primary/10 rounded-full blur-[100px] pointer-events-none"></div>

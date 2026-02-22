@@ -18,7 +18,7 @@ export default function IntroductionSection() {
       },
    ];
    return (
-      <section className="flex flex-col w-full h-full px-16 justify-start pt-21 gap-8 max-w-7xl mx-auto">
+      <section className="flex flex-col w-full justify-start gap-8 max-w-7xl mx-auto box-border max-lg:px-6 lg:px-8">
          {/* Title with Animated Cursor */}
          <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -41,14 +41,14 @@ export default function IntroductionSection() {
          </motion.div>
 
          {/* Content Section */}
-         <div className="flex flex-col md:flex-row items-stretch justify-center gap-8">
+         <div className="flex flex-col lg:flex-row items-stretch justify-center lg:gap-8 gap-4">
             {/* Image Section */}
             <motion.div
                initial={{ opacity: 0, x: -100 }}
                whileInView={{ opacity: 1, x: 0 }}
                transition={{ duration: 0.7, ease: 'easeOut' }}
                viewport={{ once: true }}
-               className="w-full lg:w-1/3 relative bg-linear-to-br from-cyan-600 to-purple-600 flex items-center justify-center rounded-sm aspect-square shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300"
+               className="hidden lg:flex w-full max-w-1/3 relative bg-linear-to-br from-cyan-600 to-purple-600 items-center justify-center rounded-sm aspect-square shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300"
             >
                <div className="relative w-[calc(100%-8px)] h-[calc(100%-8px)] rounded-sm overflow-hidden bg-slate-900">
                   <Image
@@ -60,38 +60,73 @@ export default function IntroductionSection() {
                </div>
             </motion.div>
 
+            {/* Mobile Image & Quote Section */}
+            <div className="lg:hidden flex flex-row gap-4">
+               <motion.div
+                  initial={{ opacity: 0, x: -100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.7, ease: 'easeOut' }}
+                  viewport={{ once: true }}
+                  className="relative bg-linear-to-br from-cyan-600 max-w-full max-h-full to-purple-600 flex items-center justify-center rounded-sm aspect-square shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300"
+               >
+                  <div className="relative w-[calc(100%-8px)] h-[calc(100%-8px)] rounded-sm overflow-hidden bg-slate-900">
+                     <Image
+                        src="/terksdev.jpeg"
+                        alt="TerKSDev"
+                        fill
+                        className="object-cover"
+                     />
+                  </div>
+               </motion.div>
+
+               <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
+                  viewport={{ once: true }}
+                  className="flex-1 max-lg:block hidden border bg-slate-900 rounded-md border-slate-800 text-slate-400 font-geist tracking-wide text-sm overflow-y-auto"
+               >
+                  <div className="p-3 px-5 flex flex-1 border-l-4 border-cyan-400 rounded-md items-center shadow-lg ">
+                     "Writing code is easy. Architecting experiences that last
+                     is the real craft."
+                  </div>
+               </motion.div>
+            </div>
+
             {/* Text Section */}
-            <div className="flex flex-1 flex-col gap-6 text-slate-400 font-geist tracking-wide justify-between h-full">
+            <div className="flex flex-1 flex-col gap-4 lg:gap-6  text-slate-400 font-geist tracking-wide justify-between h-full">
                {/* Introduction */}
                <motion.div
                   initial={{ opacity: 0, x: 100 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.7, ease: 'easeOut' }}
                   viewport={{ once: true }}
-                  className="bg-slate-900 p-4 rounded-md flex flex-1 max-h-fit flex-col gap-4 border border-slate-800 hover:border-cyan-600 transition-colors duration-200 shadow-lg"
+                  className="bg-slate-900 p-4 rounded-md flex flex-1 max-h-40 lg:max-h-fit flex-col gap-4 border border-slate-800 hover:border-cyan-600 transition-colors duration-200 shadow-lg"
                >
-                  <h1 className="text-xl w-full border-b-2 font-outfit tracking-wider font-medium border-slate-600/80 pb-2 mb-1">
+                  <h1 className="text-lg lg:text-xl w-full border-b-2 font-outfit tracking-wider font-medium border-slate-600/80 pb-2 mb-1">
                      # Introduction
                   </h1>
-                  <p className="px-1">
-                     Hello there! I'm{' '}
-                     <span className="text-cyan-400">Ter Kean Sen</span>. I'm a
-                     Full-Stack Developer specializing in modern web systems
-                     architectures and technologies.
-                  </p>
-                  <p className="px-1">
-                     I'm passionate about creating seamless and modern digital
-                     experiences. Whether it's{' '}
-                     <span className="underline underline-offset-[6px] decoration-cyan-400/80 text-slate-200">
-                        building interactive interfaces
-                     </span>{' '}
-                     with Next.js or{' '}
-                     <span className="underline underline-offset-[6px] decoration-purple-400/80 text-slate-200">
-                        managing powerful cloud
-                     </span>{' '}
-                     deployments on AWS, I enjoy bringing ideas to life with
-                     clean and efficient code.
-                  </p>
+                  <div className="flex flex-col gap-4 overflow-y-auto h-full max-md:text-sm">
+                     <p className="px-1">
+                        Hello there! I'm{' '}
+                        <span className="text-cyan-400">Ter Kean Sen</span>. I'm
+                        a Full-Stack Developer specializing in modern web
+                        systems architectures and technologies.
+                     </p>
+                     <p className="px-1">
+                        I'm passionate about creating seamless and modern
+                        digital experiences. Whether it's{' '}
+                        <span className="underline underline-offset-[6px] decoration-cyan-400/80 text-slate-200">
+                           building interactive interfaces
+                        </span>{' '}
+                        with Next.js or{' '}
+                        <span className="underline underline-offset-[6px] decoration-purple-400/80 text-slate-200">
+                           managing powerful cloud
+                        </span>{' '}
+                        deployments on AWS, I enjoy bringing ideas to life with
+                        clean and efficient code.
+                     </p>
+                  </div>
                </motion.div>
 
                {/* Current Status */}
@@ -102,10 +137,10 @@ export default function IntroductionSection() {
                   viewport={{ once: true }}
                   className="bg-slate-900 p-4 rounded-md flex flex-1 max-h-fit flex-col gap-4 text-slate-400 font-geist tracking-wide border border-slate-800 hover:border-cyan-600 transition-colors duration-200 shadow-lg"
                >
-                  <h1 className="text-xl w-full border-b-2 font-outfit tracking-wider font-medium border-slate-600/80 pb-2 mb-1">
+                  <h1 className="text-lg lg:text-xl w-full border-b-2 font-outfit tracking-wider font-medium border-slate-600/80 pb-2 mb-1">
                      # Current_Stat
                   </h1>
-                  <div className="px-1 flex flex-col gap-2">
+                  <div className="px-1 flex flex-col gap-2 max-md:text-sm">
                      {currentStat.map((stat) => (
                         <div
                            className="flex flex-row justify-between tracking-wider w-full gap-4 items-center"
@@ -127,7 +162,7 @@ export default function IntroductionSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
             viewport={{ once: true }}
-            className=" border bg-slate-900 rounded-md border-slate-800 text-slate-400 font-geist tracking-wide"
+            className="max-lg:hidden border bg-slate-900 rounded-md border-slate-800 text-slate-400 font-geist tracking-wide"
          >
             <div className="p-4 px-6 flex flex-1 border-l-4 border-cyan-400 rounded-md items-center shadow-lg">
                "Writing code is easy. Architecting experiences that last is the
