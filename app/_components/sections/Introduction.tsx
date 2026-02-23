@@ -18,7 +18,7 @@ export default function IntroductionSection() {
       },
    ];
    return (
-      <section className="flex flex-col w-full justify-start gap-8 max-w-7xl mx-auto box-border max-lg:px-6 lg:px-8">
+      <section className="flex flex-col w-full justify-start gap-4 lg:gap-8 max-w-7xl mx-auto box-border max-lg:px-6 lg:px-8">
          {/* Title with Animated Cursor */}
          <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -28,11 +28,11 @@ export default function IntroductionSection() {
             className="flex flex-row items-center font-jetbrains gap-8 "
          >
             <div className="flex flex-row items-center h-fit min-w-fit min-h-fit tracking-wider">
-               <h1 className="text-2xl text-cyan-400 mr-2">{'>'}</h1>
-               <h1 className="text-3xl font-semibold text-slate-100">
+               <h1 className="text-lg lg:text-2xl text-cyan-400 mr-2">{'>'}</h1>
+               <h1 className="text-xl lg:text-3xl font-semibold text-slate-100">
                   ABOUT ME
                </h1>
-               <h1 className="text-2xl ml-1 text-cyan-400 animate-pulse">
+               <h1 className="text-lg lg:text-2xl ml-1 text-cyan-400 animate-pulse">
                   {'_'}
                </h1>
             </div>
@@ -46,7 +46,7 @@ export default function IntroductionSection() {
             <motion.div
                initial={{ opacity: 0, x: -100 }}
                whileInView={{ opacity: 1, x: 0 }}
-               transition={{ duration: 0.7, ease: 'easeOut' }}
+               transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
                viewport={{ once: true }}
                className="hidden lg:flex w-full max-w-1/3 relative bg-linear-to-br from-cyan-600 to-purple-600 items-center justify-center rounded-sm aspect-square shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300"
             >
@@ -55,38 +55,40 @@ export default function IntroductionSection() {
                      src="/terksdev.jpeg"
                      alt="TerKSDev"
                      fill
+                     sizes="(min-width: 1024px) 33vw, 100vw"
                      className="object-cover"
                   />
                </div>
             </motion.div>
 
             {/* Mobile Image & Quote Section */}
-            <div className="lg:hidden flex flex-row gap-4">
+            <div className="lg:hidden flex flex-row gap-4 ">
                <motion.div
                   initial={{ opacity: 0, x: -100 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.7, ease: 'easeOut' }}
+                  transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
                   viewport={{ once: true }}
-                  className="relative bg-linear-to-br from-cyan-600 max-w-full max-h-full to-purple-600 flex items-center justify-center rounded-sm aspect-square shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300"
+                  className="relative bg-linear-to-br from-cyan-600 max-w-full max-h-full w-24 sm:w-32 to-purple-600 flex items-center justify-center rounded-sm aspect-square shadow-lg hover:shadow-cyan-500/20 transition-shadow duration-300"
                >
                   <div className="relative w-[calc(100%-8px)] h-[calc(100%-8px)] rounded-sm overflow-hidden bg-slate-900">
                      <Image
                         src="/terksdev.jpeg"
                         alt="TerKSDev"
                         fill
+                        sizes="33vw"
                         className="object-cover"
                      />
                   </div>
                </motion.div>
 
                <motion.div
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
+                  initial={{ opacity: 0, x: 100 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, ease: 'easeOut', delay: 0.4 }}
                   viewport={{ once: true }}
-                  className="flex-1 max-lg:block hidden border bg-slate-900 rounded-md border-slate-800 text-slate-400 font-geist tracking-wide text-sm overflow-y-auto"
+                  className="flex flex-1 border bg-slate-900 rounded-md border-slate-800 text-slate-400 font-geist tracking-wide text-sm overflow-y-auto"
                >
-                  <div className="p-3 px-5 flex flex-1 border-l-4 border-cyan-400 rounded-md items-center shadow-lg ">
+                  <div className="p-3 px-5 flex flex-1 border-l-4 border-cyan-400 rounded-md items-center shadow-lg">
                      "Writing code is easy. Architecting experiences that last
                      is the real craft."
                   </div>
@@ -99,12 +101,12 @@ export default function IntroductionSection() {
                <motion.div
                   initial={{ opacity: 0, x: 100 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.7, ease: 'easeOut' }}
+                  transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
                   viewport={{ once: true }}
                   className="bg-slate-900 p-4 rounded-md flex flex-1 max-h-40 lg:max-h-fit flex-col gap-4 border border-slate-800 hover:border-cyan-600 transition-colors duration-200 shadow-lg"
                >
                   <h1 className="text-lg lg:text-xl w-full border-b-2 font-outfit tracking-wider font-medium border-slate-600/80 pb-2 mb-1">
-                     # Introduction
+                     <span className="text-cyan-400 mr-2">#</span>Introduction
                   </h1>
                   <div className="flex flex-col gap-4 overflow-y-auto h-full max-md:text-sm">
                      <p className="px-1">
@@ -133,12 +135,12 @@ export default function IntroductionSection() {
                <motion.div
                   initial={{ opacity: 0, x: 100 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
+                  transition={{ duration: 0.9, ease: 'easeOut', delay: 0.6 }}
                   viewport={{ once: true }}
-                  className="bg-slate-900 p-4 rounded-md flex flex-1 max-h-fit flex-col gap-4 text-slate-400 font-geist tracking-wide border border-slate-800 hover:border-cyan-600 transition-colors duration-200 shadow-lg"
+                  className="bg-slate-900 p-4 rounded-md flex flex-1 max-h-fit flex-col gap-4 text-slate-400 font-geist tracking-wide border border-slate-800 hover:border-purple-600 transition-colors duration-200 shadow-lg selection:bg-purple-400 selection:text-slate-900"
                >
                   <h1 className="text-lg lg:text-xl w-full border-b-2 font-outfit tracking-wider font-medium border-slate-600/80 pb-2 mb-1">
-                     # Current_Stat
+                     <span className="text-purple-400 mr-2">#</span>Current_Stat
                   </h1>
                   <div className="px-1 flex flex-col gap-2 max-md:text-sm">
                      {currentStat.map((stat) => (
@@ -160,7 +162,7 @@ export default function IntroductionSection() {
          <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.4 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.8 }}
             viewport={{ once: true }}
             className="max-lg:hidden border bg-slate-900 rounded-md border-slate-800 text-slate-400 font-geist tracking-wide"
          >

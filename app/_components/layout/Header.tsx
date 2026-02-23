@@ -7,7 +7,7 @@ interface HeaderProps {
 
 export default function Header({ activeSection }: HeaderProps) {
    return (
-      <header className="fixed flex flex-row justify-between items-center top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-sm px-8 py-2">
+      <header className="fixed flex flex-row justify-between items-center top-0 left-0 w-full z-50 bg-slate-950/80 backdrop-blur-sm px-8 py-2 selection:bg-cyan-400 selection:text-slate-900">
          <Link
             href="/"
             className="flex flex-row gap-1 text-2xl w-full items-center h-16"

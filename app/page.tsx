@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Header from './_components/layout/Header';
 import CodeSection from './_components/sections/Code';
 import IntroductionSection from './_components/sections/Introduction';
+import TechAndHistorySection from './_components/sections/TechHistory';
 
 export default function Home() {
    const [activeSection, setActiveSection] = useState('');
@@ -13,8 +14,8 @@ export default function Home() {
       <>
          <Header activeSection={activeSection} />
 
-         <main className="w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-slate-950 mt-20">
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 mb-4 text-sm text-slate-400 font-jetbrains font-semibold animate-pulse z-20 pointer-events-none">
+         <main className="w-full overflow-y-scroll snap-y snap-mandatory scroll-smooth bg-slate-950 mt-10">
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 mb-4 text-sm text-slate-400 font-jetbrains font-semibold animate-pulse z-20 pointer-events-none ">
                <div className="flex flex-col w-full animate-bounce">
                   <span>Scroll Down</span>
                   <div className="relative w-full h-6">
@@ -67,7 +68,7 @@ export default function Home() {
                id="introduction"
                onViewportEnter={() => setActiveSection('introduction')}
                viewport={{ amount: 0.5 }}
-               className="h-full w-full snap-start flex justify-center relative box-border py-4"
+               className="h-full w-full snap-start flex justify-center relative box-border py-4 pt-12 selection:bg-cyan-400 selection:text-slate-900"
             >
                <IntroductionSection />
             </motion.section>
@@ -77,19 +78,9 @@ export default function Home() {
                id="projects"
                onViewportEnter={() => setActiveSection('projects')}
                viewport={{ amount: 0.5 }}
-               className="h-screen w-full snap-start flex items-center justify-center relative bg-slate-950"
+               className="h-full w-full snap-start flex justify-center relative box-border py-4 pt-12 selection:bg-cyan-400 selection:text-slate-900"
             >
-               {/* Background Glow */}
-               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-primary/10 rounded-full blur-[100px] pointer-events-none"></div>
-
-               <div className="z-10 text-center space-y-4">
-                  <h2 className="text-5xl font-outfit font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">
-                     The Omphalos Project
-                  </h2>
-                  <p className="text-slate-400 font-sans text-lg">
-                     純前端角色介紹企劃，即將啟動。
-                  </p>
-               </div>
+               <TechAndHistorySection />
             </motion.section>
 
             {/* 4. Contact Section */}

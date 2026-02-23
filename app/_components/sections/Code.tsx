@@ -9,13 +9,13 @@ const codeLines: CodeLine[] = [
    [
       {
          text: '// Initializing the Developer Instance',
-         className: 'text-zinc-500',
+         className: 'text-slate-500',
       },
    ],
    [
-      { text: 'const ', className: 'text-violet-500' },
+      { text: 'const ', className: 'text-purple-400' },
       { text: 'developer = ', className: 'text-cyan-400' },
-      { text: 'new ', className: 'text-violet-500' },
+      { text: 'new ', className: 'text-purple-400' },
       { text: 'FullstackDeveloper(', className: 'text-cyan-400' },
       { text: '"Ter Kean Sen"', className: 'text-green-500' },
       { text: ')', className: 'text-cyan-400' },
@@ -47,7 +47,7 @@ export default function CodeSection() {
    };
 
    return (
-      <section className="flex flex-col items-center justify-center relative border-2 border-slate-800 rounded-md bg-slate-900/50 backdrop-blur-sm">
+      <section className="flex flex-col items-center justify-center relative border-2 border-slate-800 rounded-md bg-slate-900/50 backdrop-blur-sm selection:bg-blue-900/80 selection:text-white">
          <div className="flex flex-row justify-between items-center gap-2.5 w-full bg-slate-800/80 px-4 py-2 border-b border-slate-800 h-11">
             <div className="flex flex-row gap-2.5">
                <div className="h-3 w-3 rounded-full bg-red-600 animate-pulse delay-100"></div>
