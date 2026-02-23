@@ -30,6 +30,11 @@ export const metadata: Metadata = {
          'Crafting digital experiences with code and creativity. Explore my journey as a full-stack developer, showcasing projects, skills, and insights into the world of web development.',
       url: 'https://terks-portfolio.vercel.app',
       siteName: 'TerKS.Dev Portfolio',
+      images: [
+         {
+            url: '/terksdev.jpeg',
+         },
+      ],
    },
 };
 
