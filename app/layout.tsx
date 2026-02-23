@@ -22,13 +22,15 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
    title: 'TerKS.Dev Portfolio',
-   description: 'Crafting digital experiences with code and creativity. Explore my journey as a full-stack developer, showcasing projects, skills, and insights into the world of web development.',
+   description:
+      'Crafting digital experiences with code and creativity. Explore my journey as a full-stack developer, showcasing projects, skills, and insights into the world of web development.',
    openGraph: {
       title: 'TerKS.Dev Portfolio',
-      description: 'Crafting digital experiences with code and creativity. Explore my journey as a full-stack developer, showcasing projects, skills, and insights into the world of web development.',
-      url: 'https://terks.dev',
+      description:
+         'Crafting digital experiences with code and creativity. Explore my journey as a full-stack developer, showcasing projects, skills, and insights into the world of web development.',
+      url: 'https://terks-portfolio.vercel.app',
       siteName: 'TerKS.Dev Portfolio',
-   }
+   },
 };
 
 export default function RootLayout({
